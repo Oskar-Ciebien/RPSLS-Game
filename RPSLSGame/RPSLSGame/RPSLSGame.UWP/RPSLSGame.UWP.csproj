@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{DB4FE8AB-066A-431D-99FE-3364C9F2DF80}</ProjectGuid>
+    <ProjectGuid>{EA2E3AA3-E711-4C55-9ECA-3E43E3D26EE2}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RPSLSGame.UWP</RootNamespace>
@@ -153,7 +153,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RPSLSGame\RPSLSGame.csproj">
-      <Project>{40DB73A4-7B59-4553-B613-42FBD546BEA4}</Project>
+      <Project>{0007CDDF-3DA1-4C14-B2BF-C44FFB9A71AC}</Project>
       <Name>RPSLSGame</Name>
     </ProjectReference>
   </ItemGroup>

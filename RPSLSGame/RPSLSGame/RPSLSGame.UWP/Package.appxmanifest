@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="f06becbf-e7db-4259-8ad7-b7d51a7fb674"
-    Publisher="CN=dc0624e7-5433-4a61-b957-9e999f5253b2"
+    Name="a12f66fe-5088-40e3-9438-b40fc82fddfc"
+    Publisher="CN=35f32c36-0286-4f95-ba71-e8eadef56bd6"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="ec0cc741-fd3e-485c-81be-68815c480690" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>RPSLSGame.UWP</DisplayName>
-    <PublisherDisplayName>dc0624e7-5433-4a61-b957-9e999f5253b2</PublisherDisplayName>
+    <PublisherDisplayName>35f32c36-0286-4f95-ba71-e8eadef56bd6</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

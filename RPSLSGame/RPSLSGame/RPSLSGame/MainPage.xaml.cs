@@ -17,6 +17,9 @@ namespace RPSLSGame
         public MainPage()
         {
             InitializeComponent();
+
+            // Alert on the start of the app
+            DisplayAlert("Welcome", "Click on one of the buttons to start playing", "Close");
         }
 
         // Method activated by the Rock Button
@@ -292,7 +295,7 @@ namespace RPSLSGame
             ImgCPUChoice.Source = null;
             ImgPlayerChoice.Source = null;
             // Displays an alert to notify the player that the game has restarted
-            DisplayAlert("New Game", "Your game has restarted.", "Continue");
+            DisplayAlert("New Game", "Your game has restarted", "Continue");
         }
     }
 }
