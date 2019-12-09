@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Oskar Ciebien</Authors>
+    <Company />
+    <Product />
+    <Description>A simple rock, paper, scissors, lizard and spock game.</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
