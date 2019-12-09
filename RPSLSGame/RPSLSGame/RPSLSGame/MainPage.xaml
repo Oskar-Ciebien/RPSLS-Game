@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:RPSLSGame"
-             x:Class="RPSLSGame.MainPage">
+             x:Class="RPSLSGame.MainPage"
+             BackgroundColor="SlateGray">
 
     <StackLayout x:Name="SLContentPage" Orientation="Vertical"
                  HorizontalOptions="Center" VerticalOptions="Center" >
@@ -10,70 +11,71 @@
         <!-- Title -->
         <StackLayout x:Name="ScoreTitle" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" >
             <Label x:Name="ScoreLbl" VerticalOptions="Center" HorizontalOptions="Center"
-                   FontSize="Large" Text="SCORE" FontAttributes = "Bold" />
+                   FontSize="Large" Text="SCORE" TextColor="Azure" FontAttributes = "Bold" />
         </StackLayout>
 
         <!-- Score table - shows the computer and player scoretitles and the image choices -->
-        <StackLayout x:Name="ScorePlayers" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+        <StackLayout x:Name="ScorePlayers" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
-                <Label x:Name="ScoreTitleComputer" FontSize="Medium" Text="COMPUTER"/>
-                <Image x:Name="ImgCPUChoice" HeightRequest="50" WidthRequest="50" Margin="10, 3"/>
+                <Label x:Name="ScoreTitleComputer" FontSize="Medium" Text="COMPUTER" TextColor="White" />
+                <Image x:Name="ImgCPUChoice" HeightRequest="50" WidthRequest="50" Margin="10, 3" />
             </StackLayout>
 
-            <Label x:Name="PlayersSeparator" FontSize="Medium" FontAttributes="Bold" Text="vs"/>
+            <Label x:Name="PlayersSeparator" FontSize="Medium" FontAttributes="Italic" Text="vs" TextColor="White" />
 
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
-                <Image x:Name="ImgPlayerChoice" HeightRequest="50" WidthRequest="50" Margin="10, 3"/>
-                <Label x:Name="ScoreTitlePlayer" FontSize="Medium" Text="PLAYER" Margin="0, 0, 10, 0"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5" >
+                <Image x:Name="ImgPlayerChoice" HeightRequest="50" WidthRequest="50" Margin="10, 3" />
+                <Label x:Name="ScoreTitlePlayer" FontSize="Medium" Text="PLAYER" Margin="0, 0, 10, 0" TextColor="White" />
             </StackLayout>
         </StackLayout>
 
         <!-- Scoreboard -->
-        <StackLayout x:Name="Scoreboard" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
+        <StackLayout x:Name="Scoreboard" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" >
             <!-- Labels to show the scores -->
             <Label x:Name="ScoreComputerLbl" VerticalOptions="Center" HorizontalOptions="Center"
-                   FontSize="Medium" Text="0"/>
+                   FontSize="Medium" Text="0" TextColor="White" FontAttributes = "Bold" />
             <Label x:Name="ScoreSeparator" VerticalOptions="Center" HorizontalOptions="Center"
-                   FontSize="Large" Text=":"/>
+                   FontSize="Large" Text=":" TextColor="White" />
             <Label x:Name="ScorePlayerLbl" VerticalOptions="Center" HorizontalOptions="Center"
-                   FontSize="Medium" Text="0"/>
+                   FontSize="Medium" Text="0" TextColor="White" FontAttributes = "Bold" />
         </StackLayout>
 
         <!-- Result Label -->
         <Label x:Name="ResultLbl" VerticalOptions="Center" HorizontalOptions="Center"
-               FontSize="Large" Text=""/>
+               FontSize="Large" Text="" TextColor="White" />
 
         <!-- Buttons for the player, used for determining their move -->
-        <StackLayout x:Name="SLButtons" Orientation="Horizontal" VerticalOptions="Center">
+        <StackLayout x:Name="SLButtons" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" >
             <ImageButton x:Name="BtnRock" Margin="5"
-                    BackgroundColor="#00000000" CornerRadius="0" BorderColor="#00000000" BorderWidth="0"
-                    HeightRequest="160" WidthRequest="160" Source="rock.png" ClassId="1"
+                    BackgroundColor="DarkOliveGreen" CornerRadius="50" BorderColor="AntiqueWhite" BorderWidth="4"
+                    HeightRequest="100" WidthRequest="100" Source="rock.png" ClassId="1"
                     Clicked="BtnPlayerChoice_Clicked" />
             <ImageButton x:Name="BtnPaper" Margin="5"
-                    BackgroundColor="#00000000" CornerRadius="0" BorderColor="#00000000" BorderWidth="0"
-                    HeightRequest="160" WidthRequest="160" Source="paper.png" ClassId="2"
+                    BackgroundColor="IndianRed" CornerRadius="50" BorderColor="AntiqueWhite" BorderWidth="4"
+                    HeightRequest="100" WidthRequest="100" Source="paper.png" ClassId="2"
                     Clicked="BtnPlayerChoice_Clicked" />
             <ImageButton x:Name="BtnScissors" Margin="5"
-                    BackgroundColor="#00000000" CornerRadius="0" BorderColor="#00000000" BorderWidth="0"
-                    HeightRequest="160" WidthRequest="160" Source="scissors.png" ClassId="3"
+                    BackgroundColor="MediumPurple" CornerRadius="50" BorderColor="AntiqueWhite" BorderWidth="4"
+                    HeightRequest="100" WidthRequest="100" Source="scissors.png" ClassId="3"
                     Clicked="BtnPlayerChoice_Clicked" />
         </StackLayout>
         <!-- Buttons for player, used for determining their move (Lizard and Spock) -->
         <StackLayout x:Name="SL2Buttons" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
             <ImageButton x:Name="BtnLizard" Margin="5"
-                    BackgroundColor="#00000000" CornerRadius="0" BorderColor="#00000000" BorderWidth="0"
-                    HeightRequest="160" WidthRequest="160" Source="lizard.png" ClassId="4"
+                    BackgroundColor="CadetBlue" CornerRadius="50" BorderColor="AntiqueWhite" BorderWidth="4"
+                    HeightRequest="100" WidthRequest="100" Source="lizard.png" ClassId="4"
                     Clicked="BtnPlayerChoice_Clicked" />
             <ImageButton x:Name="BtnSpock" Margin="5"
-                    BackgroundColor="#00000000" CornerRadius="0" BorderColor="#00000000" BorderWidth="0"
-                    HeightRequest="160" WidthRequest="160" Source="spock.png" ClassId="5"
+                    BackgroundColor="BlueViolet" CornerRadius="50" BorderColor="AntiqueWhite" BorderWidth="4"
+                    HeightRequest="100" WidthRequest="100" Source="spock.png" ClassId="5"
                     Clicked="BtnPlayerChoice_Clicked" />
         </StackLayout>
 
         <!-- Button to Restart the game -->
-        <StackLayout x:Name="SLButtonRestart" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
-            <Button x:Name="BtnRestart" BackgroundColor="DarkOrange" BorderRadius="10" BorderColor="Black" BorderWidth="2"
-                    HeightRequest="50" WidthRequest="100" FontSize="Medium" Text="Restart" Clicked="BtnRestart_Clicked" />
+        <StackLayout x:Name="SLButtonRestart" Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" >
+            <Button x:Name="BtnRestart" BorderRadius="10" BorderWidth="3" Text="Restart"
+                    HeightRequest="50" WidthRequest="100" FontSize="Medium" Clicked="BtnRestart_Clicked" 
+                    FontAttributes = "Italic" BorderColor="White" TextColor="BlanchedAlmond" BackgroundColor="Orange" />
         </StackLayout>
 
     </StackLayout>
